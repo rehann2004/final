@@ -1,1 +1,57 @@
-
+// ===== public/index.html =====
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Registration System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="auth-container">
+      <h1>Course Registration System</h1>
+      
+      <div class="auth-form" id="login-form">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginUsername">Username</label>
+            <input type="text" id="loginUsername" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" name="password" required>
+          </div>
+          <div class="form-buttons">
+            <button type="submit">Login</button>
+          </div>
+        </form>
+        <p>Don't have an account? <a href="#" id="showRegister">Register</a></p>
+      </div>
+      
+      <div class="auth-form hidden" id="register-form">
+        <h2>Register</h2>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="registerUsername">Username</label>
+            <input type="text" id="registerUsername" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="registerPassword">Password</label>
+            <input type="password" id="registerPassword" name="password" required>
+          </div>
+          <div class="form-buttons">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+        <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+      </div>
+      
+      <div class="message" id="message"></div>
+    </div>
+  </div>
+  
+  <script src="js/main.js"></script>
+</body>
+</html>
