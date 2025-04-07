@@ -1,1 +1,119 @@
-
+// ===== public/dashboard.html =====
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Selection Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="dashboard">
+      <div class="dashboard-header">
+        <h1>Course Selection Dashboard</h1>
+        <button id="logoutBtn">Logout</button>
+      </div>
+      
+      <div class="course-selection">
+        <div class="core-subjects">
+          <h2>Core Subjects</h2>
+          <p class="instruction">All core subjects must be selected</p>
+          
+          <form id="coreSubjectsForm">
+            <div class="checkbox-group">
+              <input type="checkbox" id="computerNetwork" name="computerNetwork">
+              <label for="computerNetwork">Computer Network</label>
+            </div>
+            
+            <div class="checkbox-group">
+              <input type="checkbox" id="cloudComputing" name="cloudComputing">
+              <label for="cloudComputing">Cloud Computing</label>
+            </div>
+            
+            <div class="checkbox-group">
+              <input type="checkbox" id="nlp" name="nlp">
+              <label for="nlp">NLP</label>
+            </div>
+            
+            <div class="checkbox-group">
+              <input type="checkbox" id="cnLab" name="cnLab">
+              <label for="cnLab">CN Lab</label>
+            </div>
+            
+            <div class="checkbox-group">
+              <input type="checkbox" id="minorProject" name="minorProject">
+              <label for="minorProject">Minor Project</label>
+            </div>
+            
+            <div class="checkbox-group">
+              <input type="checkbox" id="palr" name="palr">
+              <label for="palr">PALR</label>
+            </div>
+            
+            <button type="submit">Save Core Subjects</button>
+          </form>
+        </div>
+        
+        <div class="elective-subjects">
+          <h2>Elective Subjects</h2>
+          <p class="instruction">Select exactly 2 electives</p>
+          
+          <form id="electivesForm">
+            <div class="checkbox-group">
+              <input type="checkbox" id="embeddedSystem" name="embeddedSystem">
+              <label for="embeddedSystem">Embedded System</label>
+            </div>
+            
+            <div class="checkbox-group">
+              <input type="checkbox" id="blockchainLedgers" name="blockchainLedgers">
+              <label for="blockchainLedgers">Blockchain Ledgers</label>
+            </div>
+            
+            <div class="checkbox-group">
+              <input type="checkbox" id="computationalMedicine" name="computationalMedicine">
+              <label for="computationalMedicine">Computational Medicine</label>
+            </div>
+            
+            <div class="checkbox-group">
+              <input type="checkbox" id="edgeComputing" name="edgeComputing">
+              <label for="edgeComputing">Edge Computing</label>
+            </div>
+            
+            <div class="checkbox-group">
+              <input type="checkbox" id="securityOperations" name="securityOperations">
+              <label for="securityOperations">Security Operations</label>
+            </div>
+            
+            <button type="submit">Save Elective Subjects</button>
+          </form>
+        </div>
+        
+        <div class="submit-registration">
+          <button id="completeRegistrationBtn">Complete Registration</button>
+        </div>
+      </div>
+      
+      <div class="status-section">
+        <h2>Registration Status</h2>
+        <div id="coreStatus" class="status-item">
+          <span class="status-label">Core Subjects:</span>
+          <span class="status-value" id="coreStatusValue">Not Complete</span>
+        </div>
+        <div id="electiveStatus" class="status-item">
+          <span class="status-label">Elective Subjects:</span>
+          <span class="status-value" id="electiveStatusValue">Not Complete</span>
+        </div>
+        <div id="registrationStatus" class="status-item">
+          <span class="status-label">Registration:</span>
+          <span class="status-value" id="registrationStatusValue">Not Complete</span>
+        </div>
+      </div>
+      
+      <div class="message" id="dashboardMessage"></div>
+    </div>
+  </div>
+  
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
